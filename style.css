@@ -1,0 +1,130 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family:'Bebas Neue'
+	font-size: 1.2rem;
+	min-height: 100%;
+	background: #999999
+}
+
+.grid-container {
+	display: grid;
+	grid-gap: 10px;
+	grid-template: 
+	    "H" auto
+	    "N" auto
+	    "M" auto
+	    "A" auto
+	    "F" auto;
+}
+
+.grid-conteiner > * {
+	box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+	border-radius: 4px;
+	padding: 10px;
+	text-align: center;
+}
+ 
+.grid-nav{
+	display: grid;
+	grid-template-columns: repeat(5, auto);
+}
+
+.grid-main{
+	display:grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto; 
+}
+header {
+	grid-area: H;
+	background-color: #CC2EFA;
+}
+
+nav {
+	grid-area: N;
+	background-color: #F6A6FF;
+}
+
+section {
+	grid-area: M;
+	background-color: #D5AAFF;
+}
+
+aside {
+	grid-area: A;
+	background-color: #AFF8DB;
+
+}
+
+footer {
+	grid-area: F;
+	background-color: #FFABAB;
+}
+
+@media (min-width: 640px) {
+    .grid-container {
+    	grid-template:
+    	"H H" auto
+    	"N N" auto
+    	"M A" auto
+    	"F F" auto / 
+    	65% 35%
+    	;
+    	}
+    }
+
+
+@media (min-width: 768px) {
+	.grid-container {
+		grid-template:
+		"H H H" auto
+		"N M A" auto
+		"F F F" auto /
+		 15% 55% 30% ;
+		}
+		.grid-nav{
+			display:grid;
+			grid-template-columns: auto;
+			grid-template-rows: repeat(5, 2rem);
+		}
+}
+
+ul{
+	text-align: right;
+	width: 100%;
+	border-radius: 8px;
+}
+
+li{
+	display: inline-block;
+}
+
+.nav-item{
+	color:#B28DFF;
+	background-color: #E7FFAC;
+}
+
+.nav-item{
+	background-color: #BFFCC6; 
+	text-align: center;
+	width: 170px;
+	height: 20px;
+}
+
+.nav-item{
+	margin: 0px 20px;
+	text-align: center;
+	display: inline-block;
+	border-radius: 8px;
+}
+
+
